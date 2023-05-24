@@ -209,10 +209,13 @@ int main()
     int m = stoi(ltrim(rtrim(m_temp)));
 
     string result = timeInWords(h, m);
-
+    
+    // Jika running di local compiler dapat ditampilkan dengan cout
+    // cout << result << "\n";
     fout << result << "\n";
 
     fout.close();
+    // cout << "jangkrik" << endl;
 
     return 0;
 }
