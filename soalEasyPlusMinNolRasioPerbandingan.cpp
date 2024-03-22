@@ -12,30 +12,36 @@ vector<string> split(const string &);
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-void plusMinus(vector<int> arr) {
+void plusMinus(vector<int> arr)
+{
     // menentukan rasio perbandingan berapakah komposisi x dari seluruh anggota array
     // x adalah negatif atau positif atau 0
     // tampilan (rasio +) (rasio -) (rasio 0)
     double jumlahArray = 0, jumlahPlus = 0, jumlahMin = 0, jumlahNol = 0;
-    for(int i : arr){
+    for (int i : arr)
+    {
         jumlahArray++;
-        if (i < 0){
+        if (i < 0)
+        {
             jumlahMin++;
-        }else if (i > 0){
+        }
+        else if (i > 0)
+        {
             jumlahPlus++;
-        }else{
+        }
+        else
+        {
             jumlahNol++;
         }
     }
     double rasioPlus, rasioMin, rasioNol;
-    rasioPlus = jumlahPlus/jumlahArray;
-    rasioMin  = jumlahMin/jumlahArray;
-    rasioNol  = jumlahNol/jumlahArray;
+    rasioPlus = jumlahPlus / jumlahArray;
+    rasioMin = jumlahMin / jumlahArray;
+    rasioNol = jumlahNol / jumlahArray;
     cout << fixed;
     cout << setprecision(6) << rasioPlus << endl;
     cout << setprecision(6) << rasioMin << endl;
     cout << setprecision(6) << rasioNol << endl;
-
 }
 
 int main()
@@ -52,7 +58,8 @@ int main()
 
     vector<int> arr(n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int arr_item = stoi(arr_temp[i]);
 
         arr[i] = arr_item;
@@ -63,35 +70,37 @@ int main()
     return 0;
 }
 
-string ltrim(const string &str) {
+string ltrim(const string &str)
+{
     string s(str);
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace))));
 
     return s;
 }
 
-string rtrim(const string &str) {
+string rtrim(const string &str)
+{
     string s(str);
 
     s.erase(
         find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
+        s.end());
 
     return s;
 }
 
-vector<string> split(const string &str) {
+vector<string> split(const string &str)
+{
     vector<string> tokens;
 
     string::size_type start = 0;
     string::size_type end = 0;
 
-    while ((end = str.find(" ", start)) != string::npos) {
+    while ((end = str.find(" ", start)) != string::npos)
+    {
         tokens.push_back(str.substr(start, end - start));
 
         start = end + 1;

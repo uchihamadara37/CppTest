@@ -14,182 +14,332 @@ string rtrim(const string &);
  *  2. INTEGER m
  */
 
-string timeInWords(int h, int m) {
+string timeInWords(int h, int m)
+{
     string a, b, b1, b2;
-    
-    // b1 b2 b a
-    
 
-    if (m == 1){
+    // b1 b2 b a
+    // ANNAS
+    if (m == 1)
+    {
         b2 = "minute";
-    }else{
+    }
+    else
+    {
         b2 = "minutes";
     }
-    if (m == 0){
-        b = "o' clock" ;
-    }else if (m >= 1 && m <= 30){
+    if (m == 0)
+    {
+        b = "o' clock";
+    }
+    else if (m >= 1 && m <= 30)
+    {
         b = "past";
-        // 
-        
-        // 
-        if (m == 1){
+        //
+
+        //
+        if (m == 1)
+        {
             b1 = "one";
-        }else if (m == 2){
+        }
+        else if (m == 2)
+        {
             b1 = "two";
-        }else if (m == 3){
+        }
+        else if (m == 3)
+        {
             b1 = "three";
-        }else if (m == 4){
+        }
+        else if (m == 4)
+        {
             b1 = "four";
-        }else if (m == 5){
+        }
+        else if (m == 5)
+        {
             b1 = "five";
-        }else if (m == 6){
+        }
+        else if (m == 6)
+        {
             b1 = "six";
-        }else if (m == 7){
+        }
+        else if (m == 7)
+        {
             b1 = "seven";
-        }else if (m == 8){
+        }
+        else if (m == 8)
+        {
             b1 = "eight";
-        }else if (m == 9){
+        }
+        else if (m == 9)
+        {
             b1 = "nine";
-        }else if (m == 10){
+        }
+        else if (m == 10)
+        {
             b1 = "ten";
-        }else if (m == 11){
+        }
+        else if (m == 11)
+        {
             b1 = "eleven";
-        }else if (m == 12){
+        }
+        else if (m == 12)
+        {
             b1 = "twelve";
-        }else if (m == 13){
+        }
+        else if (m == 13)
+        {
             b1 = "thirteen";
-        }else if (m == 14){
+        }
+        else if (m == 14)
+        {
             b1 = "fourteen";
-        }else if (m == 15){
+        }
+        else if (m == 15)
+        {
             b1 = "quarter";
-        }else if (m == 16){
+        }
+        else if (m == 16)
+        {
             b1 = "sixteen";
-        }else if (m == 17){
+        }
+        else if (m == 17)
+        {
             b1 = "seventeen";
-        }else if (m == 18){
+        }
+        else if (m == 18)
+        {
             b1 = "eighteen";
-        }else if (m == 19){
+        }
+        else if (m == 19)
+        {
             b1 = "nineteen";
-        }else if (m == 20){
+        }
+        else if (m == 20)
+        {
             b1 = "twenty";
-        }else if (m == 21){
+        }
+        else if (m == 21)
+        {
             b1 = "twenty one";
-        }else if (m == 22){
+        }
+        else if (m == 22)
+        {
             b1 = "twenty two";
-        }else if (m == 23){
+        }
+        else if (m == 23)
+        {
             b1 = "twenty three";
-        }else if (m == 24){
+        }
+        else if (m == 24)
+        {
             b1 = "twenty four";
-        }else if (m == 25){
+        }
+        else if (m == 25)
+        {
             b1 = "twenty five";
-        }else if (m == 26){
+        }
+        else if (m == 26)
+        {
             b1 = "twenty six";
-        }else if (m == 27){
+        }
+        else if (m == 27)
+        {
             b1 = "twenty seven";
-        }else if (m == 28){
+        }
+        else if (m == 28)
+        {
             b1 = "twenty eight";
-        }else if (m == 29){
+        }
+        else if (m == 29)
+        {
             b1 = "twenty nine";
-        }else if (m == 30){
+        }
+        else if (m == 30)
+        {
             b1 = "half";
         }
-        
-        
-    }else if (m > 30 && m < 60){
+    }
+    else if (m > 30 && m < 60)
+    {
         b = "to";
-        h = h+1;
-        
-        if (m == 59){
+        h = h + 1;
+
+        if (m == 59)
+        {
             b1 = "one";
-        }else if (m == 58){
+        }
+        else if (m == 58)
+        {
             b1 = "two";
-        }else if (m == 57){
+        }
+        else if (m == 57)
+        {
             b1 = "three";
-        }else if (m == 56){
+        }
+        else if (m == 56)
+        {
             b1 = "four";
-        }else if (m == 55){
+        }
+        else if (m == 55)
+        {
             b1 = "five";
-        }else if (m == 54){
+        }
+        else if (m == 54)
+        {
             b1 = "six";
-        }else if (m == 53){
+        }
+        else if (m == 53)
+        {
             b1 = "seven";
-        }else if (m == 52){
+        }
+        else if (m == 52)
+        {
             b1 = "eight";
-        }else if (m == 51){
+        }
+        else if (m == 51)
+        {
             b1 = "nine";
-        }else if (m == 50){
+        }
+        else if (m == 50)
+        {
             b1 = "ten";
-        }else if (m == 49){
+        }
+        else if (m == 49)
+        {
             b1 = "eleven";
-        }else if (m == 48){
+        }
+        else if (m == 48)
+        {
             b1 = "twelve";
-        }else if (m == 47){
+        }
+        else if (m == 47)
+        {
             b1 = "thirteen";
-        }else if (m == 46){
+        }
+        else if (m == 46)
+        {
             b1 = "fourteen";
-        }else if (m == 45){
+        }
+        else if (m == 45)
+        {
             b1 = "quarter";
-        }else if (m == 44){
+        }
+        else if (m == 44)
+        {
             b1 = "sixteen";
-        }else if (m == 43){
+        }
+        else if (m == 43)
+        {
             b1 = "seventeen";
-        }else if (m == 42){
+        }
+        else if (m == 42)
+        {
             b1 = "eighteen";
-        }else if (m == 41){
+        }
+        else if (m == 41)
+        {
             b1 = "nineteen";
-        }else if (m == 40){
+        }
+        else if (m == 40)
+        {
             b1 = "twenty";
-        }else if (m == 39){
+        }
+        else if (m == 39)
+        {
             b1 = "twenty one";
-        }else if (m == 38){
+        }
+        else if (m == 38)
+        {
             b1 = "twenty two";
-        }else if (m == 37){
+        }
+        else if (m == 37)
+        {
             b1 = "twenty three";
-        }else if (m == 36){
+        }
+        else if (m == 36)
+        {
             b1 = "twenty four";
-        }else if (m == 35){
+        }
+        else if (m == 35)
+        {
             b1 = "twenty five";
-        }else if (m == 34){
+        }
+        else if (m == 34)
+        {
             b1 = "twenty six";
-        }else if (m == 33){
+        }
+        else if (m == 33)
+        {
             b1 = "twenty seven";
-        }else if (m == 32){
+        }
+        else if (m == 32)
+        {
             b1 = "twenty eight";
-        }else if (m == 31){
+        }
+        else if (m == 31)
+        {
             b1 = "twenty nine";
         }
     }
-    if (h == 1){
+    if (h == 1)
+    {
         a = "one";
-    }else if( h == 2){
+    }
+    else if (h == 2)
+    {
         a = "two";
-    }else if( h == 3){
+    }
+    else if (h == 3)
+    {
         a = "three";
-    }else if( h == 4){
+    }
+    else if (h == 4)
+    {
         a = "four";
-    }else if( h == 5){
+    }
+    else if (h == 5)
+    {
         a = "five";
-    }else if( h == 6){
+    }
+    else if (h == 6)
+    {
         a = "six";
-    }else if( h == 7){
+    }
+    else if (h == 7)
+    {
         a = "seven";
-    }else if( h == 8){
+    }
+    else if (h == 8)
+    {
         a = "eight";
-    }else if( h == 9){
+    }
+    else if (h == 9)
+    {
         a = "nine";
-    }else if( h == 10){
+    }
+    else if (h == 10)
+    {
         a = "ten";
-    }else if( h == 11){
+    }
+    else if (h == 11)
+    {
         a = "eleven";
-    }else if( h == 12){
+    }
+    else if (h == 12)
+    {
         a = "twelve";
     }
-    
-    if (m == 0){
-        return a + " " + b ;
-    }else if (m == 15 || m == 30 || m == 45){
+
+    if (m == 0)
+    {
+        return a + " " + b;
+    }
+    else if (m == 15 || m == 30 || m == 45)
+    {
         return b1 + " " + b + " " + a;
-    }else{
+    }
+    else
+    {
         return b1 + " " + b2 + " " + b + " " + a;
     }
 }
@@ -209,7 +359,7 @@ int main()
     int m = stoi(ltrim(rtrim(m_temp)));
 
     string result = timeInWords(h, m);
-    
+
     // Jika running di local compiler dapat ditampilkan dengan cout
     // cout << result << "\n";
     fout << result << "\n";
@@ -220,24 +370,24 @@ int main()
     return 0;
 }
 
-string ltrim(const string &str) {
+string ltrim(const string &str)
+{
     string s(str);
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace))));
 
     return s;
 }
 
-string rtrim(const string &str) {
+string rtrim(const string &str)
+{
     string s(str);
 
     s.erase(
         find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
+        s.end());
 
     return s;
 }

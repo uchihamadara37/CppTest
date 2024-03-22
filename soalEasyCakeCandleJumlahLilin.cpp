@@ -13,20 +13,25 @@ vector<string> split(const string &);
  * The function accepts INTEGER_ARRAY candles as parameter.
  */
 
-int birthdayCakeCandles(vector<int> candles) {
+int birthdayCakeCandles(vector<int> candles)
+{
     // mencari nilai high lilin tertinggi
     // menghitung ada berapa nilai tertinggi tersebut
     // aturan input tinggi 1 <= n <= 100000
-    
+
     int jumlahLilin = 0, max = -1000, jumlahHigh = 0;
-    for(int i : candles){
+    for (int i : candles)
+    {
         jumlahLilin++;
-        if (i > max){
+        if (i > max)
+        {
             max = i;
         }
     }
-    for (int i = 0; i < jumlahLilin; i++) {
-        if (candles[i] == max){
+    for (int i = 0; i < jumlahLilin; i++)
+    {
+        if (candles[i] == max)
+        {
             jumlahHigh++;
         }
     }
@@ -49,16 +54,17 @@ int main()
 
     vector<int> candles(candles_count);
 
-    for (int i = 0; i < candles_count; i++) {
+    for (int i = 0; i < candles_count; i++)
+    {
         int candles_item = stoi(candles_temp[i]);
 
         candles[i] = candles_item;
     }
 
     int result = birthdayCakeCandles(candles);
-    
-    // cuma buat ngecek pakai local compiler 
-    // cout << result << endl; 
+
+    // cuma buat ngecek pakai local compiler
+    // cout << result << endl;
     fout << result << "\n";
 
     fout.close();
@@ -66,35 +72,37 @@ int main()
     return 0;
 }
 
-string ltrim(const string &str) {
+string ltrim(const string &str)
+{
     string s(str);
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace))));
 
     return s;
 }
 
-string rtrim(const string &str) {
+string rtrim(const string &str)
+{
     string s(str);
 
     s.erase(
         find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
+        s.end());
 
     return s;
 }
 
-vector<string> split(const string &str) {
+vector<string> split(const string &str)
+{
     vector<string> tokens;
 
     string::size_type start = 0;
     string::size_type end = 0;
 
-    while ((end = str.find(" ", start)) != string::npos) {
+    while ((end = str.find(" ", start)) != string::npos)
+    {
         tokens.push_back(str.substr(start, end - start));
 
         start = end + 1;
