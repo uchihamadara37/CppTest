@@ -19,7 +19,7 @@ string timeInWords(int h, int m)
     string a, b, b1, b2;
 
     // b1 b2 b a
-
+    // ANNAS
     if (m == 1)
     {
         b2 = "minute";
